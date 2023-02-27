@@ -9,13 +9,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.raywenderlich.cinematic"
         minSdkVersion 23
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
@@ -45,7 +45,7 @@ android {
 dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def koin_version = '2.2.2'
-    def room_version = "2.3.0"
+    def room_version = "2.4.0"
     def nav_version = "2.3.4"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

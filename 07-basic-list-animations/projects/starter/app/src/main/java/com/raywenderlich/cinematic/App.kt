@@ -43,6 +43,7 @@ import com.raywenderlich.cinematic.model.CastResponse
 import com.raywenderlich.cinematic.model.Movie
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import org.koin.android.BuildConfig
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.component.KoinApiExtension
@@ -58,7 +59,7 @@ class App : Application(), KoinComponent {
     super.onCreate()
 
     startKoin {
-      androidLogger(Level.ERROR)
+      androidLogger(if (BuildConfig. DEBUG) Level.ERROR else Level. NONE)
       androidContext(this@App)
       modules(dataModule + appModule)
     }
